@@ -50,7 +50,7 @@ with mlflow.start_run():
     mlflow.log_metric("r2_score", r2)
 
     # Log model
-    mlflow.sklearn.log_model(model, "linear_regression_model")
+    mlflow.sklearn.log_model(model, artifact_path="linear_regression_model",registered_model_name="HousePriceRegressor")
 
     print("Regression metrics:")
     print(f"MSE  : {mse}")
